@@ -3,11 +3,11 @@
 
 <devices robot="iCubGenova02" build="1">
     <device name="wholebodydynamics" type="wholebodydynamics">
-        <param name="axesNames">(torso_pitch,torso_roll,torso_yaw,neck_pitch, neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
+        <param name="axesNames">(torso_pitch,torso_roll,torso_yaw,neck_pitch, neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,l_wrist_prosup,l_wrist_pitch,l_wrist_yaw,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,r_wrist_prosup,r_wrist_pitch,r_wrist_yaw,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
         <param name="modelFile">model.urdf</param>
         <param name="fixedFrameGravity">(0,0,-9.81)</param>
         <param name="assumeFixed">l_sole</param>
-        <param name="defaultContactFrames">(l_hand,r_hand,root_link,l_sole,r_sole,r_lower_leg,l_lower_leg,l_elbow_1,r_elbow_1)</param>
+        <param name="defaultContactFrames">(l_hand,r_hand,root_link,l_sole,r_sole,r_upper_leg,l_upper_leg,l_elbow_1,r_elbow_1)</param>
         <param name="imuFrameName">imu_frame</param>
         <param name="publishOnROS">true</param>
 
@@ -20,10 +20,14 @@
             <param name="l_upper_arm">(l_upper_arm,3,2)</param>
             <param name="l_elbow_1">(l_elbow_1, 3, 4)</param>
             <param name="r_upper_arm">(r_upper_arm,4,2)</param>
+            <param name="l_hand">(l_hand_dh_frame,3,6)</param>
             <param name="r_elbow_1">(r_elbow_1, 4, 4)</param>
+            <param name="r_hand">(r_hand_dh_frame,4,6)</param>
+            <param name="l_upper_leg">(l_upper_leg,5,2)</param>
             <param name="l_lower_leg">(l_lower_leg,5,3)</param>
             <param name="l_ankle_1">(l_ankle_1,5,4)</param>
             <param name="l_foot">(l_foot_dh_frame,5,5)</param>
+            <param name="r_upper_leg">(r_upper_leg,6,2)</param>
             <param name="r_lower_leg">(r_lower_leg,6,3)</param>
             <param name="r_ankle_1">(r_ankle_1,6,4)</param>
             <param name="r_foot">(r_foot_dh_frame,6,5)</param>
@@ -32,10 +36,10 @@
         <group name="GRAVITY_COMPENSATION">
             <param name="enableGravityCompensation">true</param>
             <param name="gravityCompensationBaseLink">root_link</param>
-            <param name="gravityCompensationAxesNames">(torso_pitch,torso_roll,torso_yaw,neck_pitch,neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow)</param>
+            <param name="gravityCompensationAxesNames">(torso_pitch,torso_roll,torso_yaw,neck_pitch,neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
         </group>
-
-  <!--  <group name="FT_SECONDARY_CALIBRATION">
+	
+   <!-- <group name="FT_SECONDARY_CALIBRATION">
             <param name="l_leg_ft_sensor"> (9.865575e-01,9.832824e-04,1.573775e-03,8.838008e-03,-1.242557e+00,-3.662685e-02
              ,-3.880700e-03,9.580185e-01,-3.490652e-03,3.387828e+00,-1.681220e-01,4.758923e-02
              ,-7.755550e-04,-3.081145e-03,9.960339e-01,2.731980e-01,-4.400748e-02,-2.246920e-02
@@ -49,14 +53,18 @@
              ,9.951291e-05,2.185251e-04,-7.531628e-06,9.916090e-01,9.657669e-03,-6.589607e-04
              ,-5.287989e-04,7.740907e-05,3.331646e-05,-9.419993e-03,9.524966e-01,6.184876e-04
              ,-9.859766e-06,2.091271e-04,1.660427e-05,-1.970882e-02,-1.076372e-03,1.017499e+00)</param>
-        </group> -->
+       </group> -->
 
         <group name="WBD_OUTPUT_EXTERNAL_WRENCH_PORTS">
+            <param name="/wholeBodyDynamics/left_hand/endEffectorWrench:o">(l_hand,l_hand,l_hand)</param>
+            <param name="/wholeBodyDynamics/right_hand/endEffectorWrench:o">(r_hand,r_hand,r_hand)</param>
+            <param name="/wholeBodyDynamics/left_arm/endEffectorWrench:o">(l_hand,l_hand_dh_frame,l_sole)</param>
+            <param name="/wholeBodyDynamics/right_arm/endEffectorWrench:o">(r_hand,r_hand_dh_frame,l_sole)</param>
             <param name="/wholeBodyDynamics/left_leg/cartesianEndEffectorWrench:o">(l_foot,l_sole,root_link)</param>
-            <param name="/wholeBodyDynamics/right_leg/cartesianEndEffectorWrench:o">(r_foot,r_sole,root_link)</param>
        <!-- <param name="/wholeBodyDynamics/left_foot/cartesianEndEffectorWrench:o">(l_foot,l_sole,l_sole)</param> -->
-       <!-- <param name="/wholeBodyDynamics/right_foot/cartesianEndEffectorWrench:o">(r_foot,r_sole,l_sole)</param> -->        
-       </group>
+            <param name="/wholeBodyDynamics/right_leg/cartesianEndEffectorWrench:o">(r_foot,r_sole,root_link)</param>
+       <!-- <param name="/wholeBodyDynamics/right_foot/cartesianEndEffectorWrench:o">(r_foot,r_sole,l_sole)</param> -->
+        </group>
 
         <action phase="startup" level="15" type="attach">
             <paramlist name="networks">
@@ -88,4 +96,3 @@
 
     </device>
 </devices>
-
