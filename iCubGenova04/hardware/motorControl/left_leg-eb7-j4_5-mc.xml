@@ -35,8 +35,9 @@
     </group>
 
     <group name="POS_PID_DEFAULT">
-  	    <param name="controlLaw">    Pid_inPos_outPwm </param>
-          <param name="controlUnits">  metric_units              </param>
+  	      <param name="controlLaw">    Pid_inPos_outPwm           </param>
+          <param name="fbkControlUnits">     metric_units         </param>
+          <param name="outputControlUnits">  metric_units         </param>
           <param name="pos_kp">          2200.00     2200.00      </param>
           <param name="pos_kd">            0.00         0.00      </param>
           <param name="pos_ki">            0.09         0.09      </param>
@@ -50,8 +51,9 @@
       </group>
 
 	<group name="POS_PID_CUSTOM">
-	    <param name="controlLaw">    Pid_inPos_outPwm </param>
-        <param name="controlUnits">  metric_units              </param>
+	      <param name="controlLaw">    Pid_inPos_outPwm           </param>
+        <param name="fbkControlUnits">     metric_units         </param>
+        <param name="outputControlUnits">  metric_units         </param>
         <param name="pos_kp">          3200.00     2200.00      </param>
         <param name="pos_kd">           100.00      100.00      </param>
         <param name="pos_ki">            0.09         0.09      </param>
@@ -70,8 +72,9 @@
     </group>
 
     <group name="TRQ_PID_DEFAULT">
-        <param name="controlLaw">    Pid_inTrq_outPwm           </param>
-        <param name="controlUnits">  metric_units               </param>
+        <param name="controlLaw">    Pid_inTrq_outPwm               </param>
+        <param name="fbkControlUnits">     metric_units             </param>
+        <param name="outputControlUnits">  metric_units             </param>
    <!-- <param name="trq_kp">         200          200              </param> -->
         <param name="trq_kp">         170          170              </param>
         <param name="trq_kd">           0            0              </param>
@@ -90,7 +93,8 @@
 
     <group name="TRQ_PID_TUNED">
         <param name="controlLaw">    Pid_inTrq_outPwm               </param>
-        <param name="controlUnits">  metric_units                   </param>
+        <param name="fbkControlUnits">     metric_units             </param>
+        <param name="outputControlUnits">  metric_units             </param>
         <param name="trq_kp">         100          100              </param>
         <param name="trq_kd">           0            0              </param>
         <param name="trq_ki">           0            0              </param>
@@ -107,8 +111,9 @@
     </group>
 
     <group name="TRQ_PID_NO_FRICTION">
-        <param name="controlLaw">    Pid_inTrq_outPwm           </param>
-        <param name="controlUnits">  metric_units               </param>
+        <param name="controlLaw">    Pid_inTrq_outPwm               </param>
+        <param name="fbkControlUnits">     metric_units             </param>
+        <param name="outputControlUnits">  metric_units             </param>
         <param name="trq_kp">           0            0              </param>
         <param name="trq_kd">           0            0              </param>
         <param name="trq_ki">           0            0              </param>
@@ -125,8 +130,9 @@
     </group>
 
     <group name="2FOC_CUR_CONTROL">
-        <param name="controlLaw">       limitscurrent           </param>
-        <param name="controlUnits">     metric_units            </param>
+        <param name="controlLaw">       limitscurrent               </param>
+        <param name="fbkControlUnits">     machine_units            </param>
+        <param name="outputControlUnits">  machine_units            </param>
         <param name="cur_kp">               8           8           </param>
         <param name="cur_kd">               0           0           </param>
         <param name="cur_ki">               2           2           </param>
