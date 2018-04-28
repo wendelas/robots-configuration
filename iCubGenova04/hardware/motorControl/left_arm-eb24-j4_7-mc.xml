@@ -45,9 +45,9 @@
             <param name="controlLaw">       Pid_inPos_outPwm                                  </param>
             <param name="fbkControlUnits">     metric_units                                   </param>
             <param name="outputControlUnits">  metric_units                                   </param>
-            <param name="pos_kp">              -200.0     -500.0      -500.0      -500.0      </param>
-            <param name="pos_kd">                 0.0        0.0         0.0         0.0      </param>
-            <param name="pos_ki">              -200.0      -50.0       -50.0       -50.0      </param>
+            <param name="pos_kp">                -5.95     -14.88     -14.88     -14.88       </param>
+            <param name="pos_kd">                 0.00       0.00       0.00       0.00       </param>
+            <param name="pos_ki">                -5.95      -1.49      -1.49      -1.49       </param>
             <param name="pos_maxOutput">         3360       3360        3660        3360      </param>
             <param name="pos_maxInt">            3360       3360        3360        3360      </param>
             <param name="pos_shift">             0           0           0           0        </param>
@@ -61,7 +61,7 @@
             <param name="controlLaw">    Pid_inTrq_outPwm                                 </param>
             <param name="fbkControlUnits">     metric_units                               </param>
             <param name="outputControlUnits">  metric_units                               </param>
-            <param name="trq_kp">          -1000           0           0           0      </param>
+            <param name="trq_kp">            -29.76       0.00       0.00       0.00      </param>
             <param name="trq_kd">              0           0           0           0      </param>
             <param name="trq_ki">              0           0           0           0      </param>
             <param name="trq_maxOutput">    3360           0           0           0      </param>
@@ -73,7 +73,7 @@
             <param name="trq_kff">             0           0           0           0      </param>
             <param name="trq_kbemf">           0           0           0           0      </param>
             <param name="trq_filterType">      0           0           0           0      </param>
-            <param name="trq_ktau">            1           0           0           0      </param>
+            <param name="trq_ktau">            0.03       0.00       0.00       0.00      </param>
         </group>
 
     </device>
