@@ -37,9 +37,9 @@
 	      <param name="controlLaw">    Pid_inPos_outPwm                     </param>
         <param name="fbkControlUnits">     metric_units                   </param>
         <param name="outputControlUnits">  metric_units                   </param>
-        <param name="pos_kp">            -711.11    -1066.66    -1066.66  </param>
+        <param name="pos_kp">             -2.22       -3.33       -3.33   </param>
         <param name="pos_kd">              0.00        0.00        0.00   </param>
-        <param name="pos_ki">           -7111.09   -10666.64   -14222.18  </param>
+        <param name="pos_ki">             -22.22      -33.33      -44.44  </param>
         <param name="pos_maxOutput">       8000        8000       16000   </param>
         <param name="pos_maxInt">           750        1000        1000   </param>
         <param name="pos_shift">              0           0           0   </param>
@@ -53,7 +53,7 @@
      <param name="controlLaw">    Pid_inTrq_outPwm                        </param>
      <param name="fbkControlUnits">     metric_units                      </param>
      <param name="outputControlUnits">  metric_units                      </param>
-     <param name="trq_kp">            -450       -400       -400          </param>
+     <param name="trq_kp">             -1.41      -1.25      -1.25        </param>
      <param name="trq_kd">              0          0          0           </param>
      <param name="trq_ki">              0          0          0           </param>
      <param name="trq_maxOutput">    8000       8000       8000           </param>
@@ -65,14 +65,14 @@
      <param name="trq_kff">             1          1          1           </param>
      <param name="trq_kbemf">          -0.0016    -0.003     -0.003       </param>
      <param name="trq_filterType">      0          0          0           </param>
-     <param name="trq_ktau">          -200       -200       -200          </param>
+     <param name="trq_ktau">           -0.63      -0.63      -0.63        </param>
  </group>
 
 	 <group name="TRQ_PID_CUSTOM">
         <param name="controlLaw">    Pid_inTrq_outPwm                </param>
         <param name="fbkControlUnits">     metric_units              </param>
         <param name="outputControlUnits">  metric_units              </param>
-        <param name="trq_kp">            -100       -100       -100  </param>
+        <param name="trq_kp">             -0.31      -0.31      -0.31 </param>
         <param name="trq_kd">              0          0          0   </param>
         <param name="trq_ki">              0          0          0   </param>
         <param name="trq_maxOutput">    8000       8000       8000   </param>
@@ -84,7 +84,7 @@
         <param name="trq_kff">             1          1          1   </param>
         <param name="trq_kbemf">           0          0          0   </param>
         <param name="trq_filterType">      0          0          0   </param>
-        <param name="trq_ktau">          -200       -200       -200  </param>
+        <param name="trq_ktau">           -0.63      -0.63      -0.63 </param>
     </group>
 
     <group name="TRQ_PID_NO_FRICTION">
@@ -103,7 +103,7 @@
         <param name="trq_kff">             1          1          1   </param>
         <param name="trq_kbemf">           0          0          0   </param>
         <param name="trq_filterType">      0          0          0   </param>
-        <param name="trq_ktau">          -200       -200       -200  </param>
+        <param name="trq_ktau">           -0.63      -0.63      -0.63 </param>
     </group>
 
     <group name="IMPEDANCE">

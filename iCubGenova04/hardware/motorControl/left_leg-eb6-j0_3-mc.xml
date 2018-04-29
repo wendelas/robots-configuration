@@ -37,9 +37,9 @@
       <param name="controlLaw">           Pid_inPos_outPwm                         </param>
       <param name="fbkControlUnits">     metric_units                              </param>
       <param name="outputControlUnits">  metric_units                              </param>
-      <param name="pos_kp">            -1066.66     2066.66    -711.11    -1066.66 </param>
+      <param name="pos_kp">               -3.33        6.46      -2.22      -3.33  </param>
       <param name="pos_kd">                0.00        0.00       0.00       0.00  </param>
-      <param name="pos_ki">           -10666.64    14222.18   -7111.09    -1066.64 </param>
+      <param name="pos_ki">               -33.33       44.44     -22.22     -3.33  </param>
       <param name="pos_maxOutput">         8000        8000       8000       8000  </param>
       <param name="pos_maxInt">            1500        1500        750       1000  </param>
       <param name="pos_shift">                0           0          0          0  </param>
@@ -53,9 +53,9 @@
 	      <param name="controlLaw">    Pid_inPos_outPwm                                </param>
         <param name="fbkControlUnits">     metric_units                              </param>
         <param name="outputControlUnits">  metric_units                              </param>
-        <param name="pos_kp">            -2000.66     2000.66    -711.11    -2000.66 </param>
-        <param name="pos_kd">             -100.00      100.00    -100.00     -100.00 </param>
-        <param name="pos_ki">           -11000.00    14000.00   -7111.00    -1000.00 </param>
+        <param name="pos_kp">             -6.25        6.25      -2.22       -6.25   </param>
+        <param name="pos_kd">              -0.31       0.31      -0.31       -0.31   </param>
+        <param name="pos_ki">             -34.38      43.75      -22.22      -3.13   </param>
         <param name="pos_maxOutput">         8000        8000       8000       8000  </param>
         <param name="pos_maxInt">            1500        1500        750       1000  </param>
         <param name="pos_shift">                0           0          0          0  </param>
@@ -74,7 +74,7 @@
         <param name="controlLaw">    Pid_inTrq_outPwm                             </param>
         <param name="fbkControlUnits">     metric_units                           </param>
         <param name="outputControlUnits">  metric_units                           </param>
-        <param name="trq_kp">            -150        150          0       -150    </param>      <!--   -200        200       0       -200    -->
+        <param name="trq_kp">             -0.47       0.47       0.00      -0.47  </param>      
         <param name="trq_kd">              0          0          0          0     </param>
         <param name="trq_ki">              0          0          0          0     </param>
         <param name="trq_maxOutput">    8000       8000       8000       8000     </param>
@@ -86,14 +86,14 @@
         <param name="trq_kff">             1          1          1          1     </param>
         <param name="trq_kbemf">           0          0          0          0     </param>
         <param name="trq_filterType">      0          0          0          0     </param>
-        <param name="trq_ktau">         -162        178       -197       -167     </param>
+        <param name="trq_ktau">          -0.51        0.56      -0.62      -0.52  </param>
     </group>
 
     <group name="TRQ_PID_NO_FRICTION">
         <param name="controlLaw">    Pid_inTrq_outPwm                             </param>
         <param name="fbkControlUnits">     metric_units                           </param>
         <param name="outputControlUnits">  metric_units                           </param>
-        <param name="trq_kp">              0          0          0          0     </param>      <!--   -200        200       0       -200    -->
+        <param name="trq_kp">              0          0          0          0     </param>      
         <param name="trq_kd">              0          0          0          0     </param>
         <param name="trq_ki">              0          0          0          0     </param>
         <param name="trq_maxOutput">    8000       8000       8000       8000     </param>
@@ -105,14 +105,14 @@
         <param name="trq_kff">             1          1          1          1     </param>
         <param name="trq_kbemf">           0          0          0          0     </param>
         <param name="trq_filterType">      0          0          0          0     </param>
-        <param name="trq_ktau">         -140        180       -197       -200     </param>
+        <param name="trq_ktau">           -0.44       0.56      -0.62      -0.63  </param>
     </group>
 
     <group name="TRQ_PID_TUNED">
         <param name="controlLaw">    Pid_inTrq_outPwm                             </param>
         <param name="fbkControlUnits">     metric_units                           </param>
         <param name="outputControlUnits">  metric_units                           </param>
-        <param name="trq_kp">              0          0          0       -150     </param>      <!--   -200        200       0       -200    -->
+        <param name="trq_kp">              0.00       0.00       0.00      -0.47  </param>      
         <param name="trq_kd">              0          0          0          0     </param>
         <param name="trq_ki">              0          0          0          0     </param>
         <param name="trq_maxOutput">    8000       8000       8000       8000     </param>
@@ -124,7 +124,7 @@
         <param name="trq_kff">             1          1          1          1     </param>
         <param name="trq_kbemf">           0          0          0          0     </param>
         <param name="trq_filterType">      0          0          0          0     </param>
-        <param name="trq_ktau">         -140        180       -197       -200     </param>
+        <param name="trq_ktau">           -0.44       0.56      -0.62      -0.63  </param>
     </group>
 
     <group name="2FOC_CUR_CONTROL">
