@@ -43,7 +43,7 @@
 	    <group name="POS_PID_DEFAULT">
 	          <param name="controlLaw">    Pid_inPos_outPwm                                        </param> 
             <param name="fbkControlUnits">     metric_units                                      </param> 
-            <param name="outputControlUnits">  metric_units                                      </param>
+            <param name="outputControlUnits">  dutycycle_percent                                      </param>
             <param name="pos_kp">                14.88       14.88      -14.88       5.95        </param>
             <param name="pos_kd">                0.0         0.0         0.0         0.0         </param>
             <param name="pos_ki">                1.49        1.49       -1.49        0.60        </param>

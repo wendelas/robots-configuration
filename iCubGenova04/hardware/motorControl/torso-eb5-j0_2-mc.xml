@@ -36,7 +36,7 @@
 	  <group name="POS_PID_DEFAULT">
 	      <param name="controlLaw">    Pid_inPos_outPwm                     </param>
         <param name="fbkControlUnits">     metric_units                   </param>
-        <param name="outputControlUnits">  metric_units                   </param>
+        <param name="outputControlUnits">  dutycycle_percent                   </param>
         <param name="pos_kp">             -2.22       -3.33       -3.33   </param>
         <param name="pos_kd">              0.00        0.00        0.00   </param>
         <param name="pos_ki">             -22.22      -33.33      -44.44  </param>
@@ -52,7 +52,7 @@
     <group name="TRQ_PID_DEFAULT">
      <param name="controlLaw">    Pid_inTrq_outPwm                        </param>
      <param name="fbkControlUnits">     metric_units                      </param>
-     <param name="outputControlUnits">  metric_units                      </param>
+     <param name="outputControlUnits">  dutycycle_percent                 </param>
      <param name="trq_kp">             -1.41      -1.25      -1.25        </param>
      <param name="trq_kd">              0          0          0           </param>
      <param name="trq_ki">              0          0          0           </param>
@@ -71,7 +71,7 @@
 	 <group name="TRQ_PID_CUSTOM">
         <param name="controlLaw">    Pid_inTrq_outPwm                </param>
         <param name="fbkControlUnits">     metric_units              </param>
-        <param name="outputControlUnits">  metric_units              </param>
+        <param name="outputControlUnits">  dutycycle_percent         </param>
         <param name="trq_kp">             -0.31      -0.31      -0.31 </param>
         <param name="trq_kd">              0          0          0   </param>
         <param name="trq_ki">              0          0          0   </param>
@@ -90,7 +90,7 @@
     <group name="TRQ_PID_NO_FRICTION">
         <param name="controlLaw">    Pid_inTrq_outPwm                </param>
         <param name="fbkControlUnits">     metric_units              </param> 
-        <param name="outputControlUnits">  metric_units              </param>
+        <param name="outputControlUnits">  dutycycle_percent         </param>
         <param name="trq_kp">              0          0          0   </param>
         <param name="trq_kd">              0          0          0   </param>
         <param name="trq_ki">              0          0          0   </param>
