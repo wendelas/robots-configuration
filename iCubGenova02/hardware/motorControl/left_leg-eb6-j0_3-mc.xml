@@ -57,7 +57,7 @@
         <param name="controlLaw">    Pid_inTrq_outPwm </param> 
         <param name="fbkControlUnits">  metric_units                             </param> 
         <param name="outputControlUnits">  dutycycle_percent                     </param> 
-        <param name="trq_kp">            -0.62       0.62       0.00      -0.62  </param> 
+        <param name="trq_kp">             0          0          0        -0.47   </param> 
         <param name="trq_kd">             0          0          0          0     </param>
         <param name="trq_ki">             0          0          0          0     </param>
         <param name="trq_maxOutput">     25         25         25         25     </param>
@@ -69,7 +69,7 @@
         <param name="trq_kff">            1          1          1          1     </param>
         <param name="trq_kbemf">          0          0          0          0     </param>
         <param name="trq_filterType">     0          0          0          0     </param>
-        <param name="trq_ktau">          -0.46       0.56       0         -0.88     </param>
+        <param name="trq_ktau">          -0.46       0.56      -0.62      -0.88  </param>
      </group>
 
     <group name="2FOC_CUR_CONTROL">
